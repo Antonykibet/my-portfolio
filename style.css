@@ -17,6 +17,21 @@ header{
     justify-content: center;
     align-items: center;
 }
+html::-webkit-scrollbar {
+    background-color:  rgb(36, 36, 36);
+    width: 8px;
+}
+html::-webkit-scrollbar-thumb{
+    background-color: rgb(94, 94, 94);
+    border-radius: 4px; 
+}
+html{
+    scrollbar-width: thin;
+}
+html scrollbar {
+    background-color: #888;
+    border-radius: 4px;
+  }
 #link{
     display: flex;
     justify-content: space-around;
@@ -127,4 +142,49 @@ i{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+#projectsMiniSection{
+    height: 80vh;
+    width: 80%;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #1f1f1f;
+    overflow: auto;
+}
+#projectsMiniSection::-webkit-scrollbar {
+    background-color: transparent;
+    width: 8px;
+}
+#projectsMiniSection::-webkit-scrollbar-thumb{
+    background-color: rgb(94, 94, 94);
+    border-radius: 4px; 
+}
+#projectsMiniSection{
+    scrollbar-width: thin;
+}
+#projectsMiniSection scrollbar {
+    background-color: #888;
+    border-radius: 4px;
+}
+.projects{
+    border: solid whitesmoke;
+    height: 25vh;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.thumbnail{
+    width: 30%;
+    height: 100%;
+    border: solid;
+}
+.projectsAbout{
+    width: 70%;
+    height: 100%;
+    border: solid;
 }
