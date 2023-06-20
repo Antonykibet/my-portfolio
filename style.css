@@ -6,7 +6,7 @@ body{
 }
 p{
     margin: 0;
-    width:70%;
+    width:90%;
     color: grey;
     font-family: 'Poppins';
 }
@@ -39,23 +39,31 @@ html scrollbar {
     font-style: normal;
     font-family: 'Poppins',sans-serif;
 }
+#myLogo{
+    width: 300px;
+    object-fit: cover;
+    object-position:bottom;
+}
 #logo{
-    font-family: 'Bebas Neue';
-    font-size: 40px;
+    border: solid;
+    height: 56px;
+    object-fit: cover;
+    object-position:top;
 }
 i{
     font-style: normal;
 }
-#innerDiv{
+#links{
     width: 85%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: rgb(255, 89, 29);
+    color:  rgb(255, 101, 46);
+    font-size: large;
     height: 90%;
 }
 .sectionName{
-    color: rgb(255, 89, 29);
+    color:  rgb(255, 101, 46);
     font-size: 300%;
     margin: 0;
     font-family: 'Poppins';
@@ -78,23 +86,24 @@ i{
     background-color: #1f1f1f;
 }
 #hello{
-    font-size: 100px;
+    font-size: 10vh;
     color: rgb(255, 101, 46);
     font-family: 'Poppins';
     margin-bottom: 0px;
 }
 #occupation{
-    font-size: 60px;
+    font-size: 6vh;
     font-weight: 700;
-    color: rgb(255, 89, 29);
+    color:  rgb(255, 101, 46);
     font-family: 'Roboto';
     margin-top: -16px;
     margin-bottom: 0px;
 }
 #contact{
     height: 5vh;
-    width: 15%;
-    background-color:rgb(255, 89, 29);
+    padding-left: 16px;
+    padding-right: 16px;
+    background-color: rgb(255, 101, 46);
     color:rgb(36, 36, 36) ;
     font-family: 'Roboto';
     border: none;
@@ -123,7 +132,7 @@ i{
 .skills{
     height: 30vh;
     width: 26%;
-    background-color:rgb(255, 107, 54);
+    background-color: #ff652e;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -147,7 +156,7 @@ i{
     height: 80vh;
     width: 80%;
     padding-top: 24px;
-    padding-bottom: 24px;
+    padding-bottom: 56px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -171,9 +180,9 @@ i{
     border-radius: 4px;
 }
 .projects{
-    border: solid whitesmoke;
     height: 25vh;
     width: 90%;
+    margin-top: 24px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -181,10 +190,92 @@ i{
 .thumbnail{
     width: 30%;
     height: 100%;
-    border: solid;
+}
+.imageThumbnail{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.title{
+    font-family: 'Poppins';
+    font-size: 140%;
+    color: rgb(255, 101, 46);
+    margin:0 ;
 }
 .projectsAbout{
     width: 70%;
     height: 100%;
-    border: solid;
+    padding-left: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+@media screen and (max-width: 450px){
+    .section{
+        height: auto;
+        width: 100%;
+    }
+    #occupation{
+        width: 70%;
+    }
+    #catchPhrase{
+        height: auto;
+        margin-top: 24px;
+        width: 80%;
+        padding-bottom: 56px;
+    }
+    #skillMiniSection{
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        height: auto;
+        flex-wrap: nowrap;
+        width: 80%;
+        padding-top: 24px;
+    }
+    .skills{
+        margin-bottom: 24px;
+        padding-top: 24px;
+        height: 30vh;
+        width: 90%;
+        justify-content: space-between;
+    }
+    #projectsMiniSection{
+        padding-top: 0px;
+        height: auto;
+    }
+    .projects{
+        flex-direction: column;
+        height: auto;
+        align-items: start;
+        margin-top: 0x;
+    }
+    .thumbnail{
+        width: 100%;
+        height: 20vh;
+    }
+    .imageThumbnail{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    .title{
+        font-family: 'Poppins';
+        font-size: 140%;
+        color: rgb(255, 101, 46);
+        margin:0 ;
+    }
+    .projectsAbout{
+        width: 100%;
+        height: auto;
+        padding-left: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+    }
+    .brief{
+        width: 90%;
+    }
 }
