@@ -10,11 +10,12 @@ p{
     color: grey;
     font-family: 'Poppins';
 }
+a{}
 header{
     background-color: #1f1f1f;
     height: 10vh;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 html::-webkit-scrollbar {
@@ -27,6 +28,7 @@ html::-webkit-scrollbar-thumb{
 }
 html{
     scrollbar-width: thin;
+    scroll-behavior: smooth;
 }
 html scrollbar {
     background-color: #888;
@@ -38,17 +40,22 @@ html scrollbar {
     width: 30%;
     font-style: normal;
     font-family: 'Poppins',sans-serif;
+    color:  rgb(255, 101, 46);
 }
 #myLogo{
     width: 300px;
-    object-fit: cover;
-    object-position:bottom;
-}
-#logo{
-    border: solid;
-    height: 56px;
+    height: 10vh ;
     object-fit: cover;
     object-position:top;
+}
+#hamburger{
+    display: none;
+}
+#logo{
+    /* border: solid;
+    height: 56px;
+    object-fit: cover;
+    object-position:top; */
 }
 i{
     font-style: normal;
@@ -212,18 +219,35 @@ i{
     flex-direction: column;
 }
 @media screen and (max-width: 450px){
-    .section{
-        height: auto;
-        width: 100%;
+    header{
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    #hamburger{
+        display: flex;
+        font-size: 56px;
+    }
+    #myLogo{
+        width: 30%;
+    }
+    #hello{
+        font-size: 5vh;
     }
     #occupation{
-        width: 70%;
+        font-size: 4vh;
+        margin-top: 34px;
+    }
+    .section{
+        padding-top: 24px;
+        height: auto;
+        width: 100%;
     }
     #catchPhrase{
         height: auto;
         margin-top: 24px;
-        width: 80%;
-        padding-bottom: 56px;
+        margin-bottom: 24px;
+        width: 85%;
+        padding-bottom: 24px;
     }
     #skillMiniSection{
         justify-content: space-around;
@@ -231,19 +255,26 @@ i{
         flex-direction: column;
         height: auto;
         flex-wrap: nowrap;
-        width: 80%;
+        width: 90%;
         padding-top: 24px;
+        margin-bottom: 24px;
     }
     .skills{
         margin-bottom: 24px;
         padding-top: 24px;
-        height: 30vh;
+        height: 25vh;
         width: 90%;
         justify-content: space-between;
+        background-color: #ff7847;
+    }
+    #link{
+        display: none;
     }
     #projectsMiniSection{
         padding-top: 0px;
         height: auto;
+        margin-bottom: 24px;
+        width: 90%;
     }
     .projects{
         flex-direction: column;
