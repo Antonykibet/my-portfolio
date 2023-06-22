@@ -13,15 +13,23 @@
             <div id="logo"><img id="myLogo" src="logos/WEB Guy (1).png" alt=""></div>
              
             <ul id="link">
-                <a href=""> <i>Home</i> </a>
-                <i>Skills</i>
-                <i>Projects</i>
-                <i>Testimonies</i>
+                <a href=""> <i class="nav">Home</i> </a>
+                <a href=""> <i class="nav">Skills</i> </a>
+                <a href=""> <i class="nav">Projects</i> </a>
+                <a href=""> <i class="nav">Testimonies</i> </a>
             </ul>
         </div>
-        <div id="hamburger"> =</div>  
+        <div id="hamburger"> <img onclick="dropDownHider()" id="hamburgerIcon" src="icons/icons8-hamburger-24.png" alt=""> </div>  
     </header>
-    <section class="section">
+    <div id="mobileMenu">
+        <ul onclick="dropDownHider()" id="linkMobile">
+            <a href="#homeSection"> <i>Home</i> </a>
+            <a href="#skillSection"> <i class="nav">Skills</i> </a>
+            <a href="#projectSection"> <i class="nav">Projects</i> </a>
+            <a href=""> <i class="nav">Testimonies</i> </a>
+        </ul>
+    </div>
+    <section class="section" id="homeSection">
         <div id="catchPhrase">
             <h1 id="hello">Antony Kibet</h1>
             <h2 id="occupation">Fullstack Web Developer.</h2>
@@ -32,7 +40,7 @@
         </div>
     </section>
     <section id="about"></section>
-    <section class="section">
+    <section class="section" id="skillSection">
         <div style="width: 80%;" ><h1 class="sectionName">SKILLS</h1></div>
         <div id="skillMiniSection">
             <div class="skills">
@@ -62,7 +70,7 @@
         </div>
     </section>
 
-    <section class="section" id="projectSection">
+    <section class="section" id="projectSection" >
         <div style="width: 80%;" ><h1 class="sectionName">PROJECTS</h1></div>
         <div id="projectsMiniSection">
             <div class="projects">
@@ -70,7 +78,7 @@
                     <img class="imageThumbnail" src="thumbnails/prime screenshot.png" alt="">
                 </div>
                 <div class="projectsAbout">
-                    <h1 class="title">Prime Fan Made Website</h1>
+                    <a target="_blank" href="https://primeweb.netlify.app/"><h1 class="title">Prime Fan Made Website</h1></a>
                     <p class="brief">
                         orem ipsum dolor sit amet, consectetur adipisicing elit. Odio nisi totam sequi vero placeat eaque incidunt voluptates aliquam id sed culpa, impedit quam! Adipisci explicabo architecto doloribus aspernatur deleniti ut?
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis minima itaque reiciendis qui in quos vel a, amet dolor id sit suscipit libero nihil provident magnam eaque ipsa hic nam.
@@ -82,7 +90,7 @@
             <div class="projects">
                 <div class="thumbnail"> <img class="imageThumbnail" src="thumbnails/jservices screenshot.png" alt=""></div>
                 <div class="projectsAbout">
-                    <h1 class="title">Refunding Site</h1>
+                    <a target="_blank" href="https://jservices.gg/"><h1 class="title">Refunding Site</h1></a>
                     <p class="brief">
                         orem ipsum dolor sit amet, consectetur adipisicing elit. Odio nisi totam sequi vero placeat eaque incidunt voluptates aliquam id sed culpa, impedit quam! Adipisci explicabo architecto doloribus aspernatur deleniti ut?
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis minima itaque reiciendis qui in quos vel a, amet dolor id sit suscipit libero nihil provident magnam eaque ipsa hic nam.
@@ -94,7 +102,7 @@
             <div class="projects">
                 <div class="thumbnail"> <img class="imageThumbnail" src="thumbnails/chatbot screenshot.png" alt=""> </div>
                 <div class="projectsAbout">
-                    <h1 class="title">Ai Chat Bot</h1>
+                    <a target="_blank" href="https://ai-chatbot-hillary.netlify.app/"><h1 class="title">Ai Chat Bot</h1></a>
                     <p class="brief">
                         orem ipsum dolor sit amet, consectetur adipisicing elit. Odio nisi totam sequi vero placeat eaque incidunt voluptates aliquam id sed culpa, impedit quam! Adipisci explicabo architecto doloribus aspernatur deleniti ut?
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis minima itaque reiciendis qui in quos vel a, amet dolor id sit suscipit libero nihil provident magnam eaque ipsa hic nam.
@@ -104,5 +112,21 @@
             </div>
         </div>
     </section>
+
+    <script >
+        let body=document.getElementsByTagName('body')[0];
+        let dropDown=document.getElementById('mobileMenu');
+        function dropDownHider(){
+            dropDown.classList.toggle("show")
+            if (dropDown.classList.contains("show")) {
+                body.style.overflow = "hidden";
+                dropDown.style.display='flex'
+            }else {
+                body.style.overflow = "auto";
+                dropDown.style.display='none'
+            }
+        }
+        
+    </script>
 </body>
 </html>
